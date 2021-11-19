@@ -1,6 +1,7 @@
 import sys
 
 from PyQt5 import uic
+import random
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
@@ -24,8 +25,8 @@ class MyWidget(QMainWindow):
         self.repaint()
 
     def draw_flag(self, qp):
-        qp.setBrush(QColor(255, 0, 0))
-        qp.drawEllipse(50, 50, 50, 50)
+        qp.setBrush(QColor(255, 255, 0))
+        qp.drawEllipse(random.randint(0, 50), random.randint(0, 50), random.randint(0, 50), random.randint(0, 50))
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
